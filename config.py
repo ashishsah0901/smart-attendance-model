@@ -5,8 +5,8 @@ TRAIN_DIR = "data/faces/training"
 VAL_DIR = "data/faces/testing"
 LOAD_MODEL = False
 SAVE_MODEL = True
-BATCH_SIZE = 64
-EPOCHS = 100
+BATCH_SIZE = 32
+EPOCHS = 150
 LR = 5e-4
 TRANS = tt.Compose(
         [
