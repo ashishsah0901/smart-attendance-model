@@ -5,3 +5,11 @@ __pycache__/
 *.tar
 image0.png
 image2.png
+/lib
+/bin
+/share
+*.cfg
+*.sh
+/miniconda3
+data
+etc
