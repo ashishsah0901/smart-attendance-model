@@ -39,11 +39,9 @@ def main():
         load_checkpoint(model,optimizer,config.LR)
     train_dataset = SiameseDataset(root_dir=config.TRAIN_DIR,transform=config.TRANS,should_invert=False)
     train_loader = DataLoader(train_dataset,batch_size=config.BATCH_SIZE,shuffle=True)
-    min_loss = 10
     for i in range(config.EPOCHS):
         loss = train_fn(model,optimizer,train_loader,criterion,i)
-        if config.SAVE_MODEL and min_loss > loss:
-            loss = min_loss
+        if i % 10 == 0:
             save_checkpoint(model,optimizer)
 
 if __name__=='__main__':
